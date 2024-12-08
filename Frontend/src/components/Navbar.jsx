@@ -1,37 +1,128 @@
-// src/components/Navbar.jsx
-import React from 'react';
+import React from "react";
 
 const Navbar = () => {
+  const menuItems = [
+    {
+      label: "About",
+      links: [
+        { label: "Overview", href: "#" },
+        { label: "Mission & Vision", href: "#" },
+        { label: "Leadership", href: "#" },
+      ],
+    },
+    {
+      label: "Admissions",
+      links: [
+        { label: "Undergraduate - Campus Programmes", href: "#" },
+        { label: "Postgraduate - Campus Programmes", href: "#" },
+        { label: "Work Integrated Programmes", href: "#" },
+        { label: "Admission Process", href: "#" },
+        { label: "Scholarship Financial Aid", href: "#" },
+        { label: "Prospectus-2024", href: "#" },
+        { label: "Eligibility Selection Criterion", href: "#" },
+        { label: "Fee Structure 2024-2025", href: "#" },
+        { label: "Fee Refund Policy", href: "#" },
+      ],
+    },
+    {
+      label: "Schools",
+      links: [
+        { label: "School of Engineering", href: "#" },
+        { label: "School of Management", href: "#" },
+        { label: "School of Arts & Science", href: "#" },
+      ],
+    },
+    {
+      label: "Collaborations",
+      links: [
+        { label: "Industry Partners", href: "#" },
+        { label: "International Tie-Ups", href: "#" },
+        { label: "Research Collaborations", href: "#" },
+      ],
+    },
+    {
+      label: "Life at MSU",
+      links: [
+        { label: "Campus Life", href: "#" },
+        { label: "Student Clubs", href: "#" },
+        { label: "Events", href: "#" },
+      ],
+    },
+    {
+      label: "Happenings",
+      links: [
+        { label: "News", href: "#" },
+        { label: "Announcements", href: "#" },
+        { label: "Blogs", href: "#" },
+      ],
+    },
+  ];
+
   return (
-    <nav className="flex items-center justify-between p-5 bg-white shadow-md">
-      {/* Logo Section */}
-      <div className="flex items-center">
-        <img src="/path-to-logo.png" alt="Medhavi Skills University Logo" className="w-36" />
-        <span className="ml-2 text-2xl font-bold text-blue-600">MedHavi Skills University</span>
-      </div>
+    <header>
+      {/* Announcement Bar */}
+      <div className="bg-redTheme text-center py-2 font-bold text-white overflow-hidden">
+  <div className="whitespace-nowrap animate-move">
+    Announcements: Admission 2025 Open for Queries or Telephonic Counseling call +91 5783921999
+  </div>
+</div>
 
-      {/* Navbar Links */}
-      <div className="flex space-x-6 text-lg">
-        <a href="#" className="hover:text-blue-600">About</a>
-        <a href="#" className="hover:text-blue-600">Academic</a>
-        <a href="#" className="hover:text-blue-600">Admissions</a>
-        <a href="#" className="hover:text-blue-600">Schools</a>
-        <a href="#" className="hover:text-blue-600">Collaborations</a>
-        <a href="#" className="hover:text-blue-600">Life @ MSU</a>
-        <a href="#" className="hover:text-blue-600">Happenings</a>
-      </div>
 
-      {/* Apply Now Button */}
-      <div>
-        <a
-          href="#"
-          className="px-6 py-2 text-white bg-orange-500 rounded-full hover:bg-orange-600 transition-colors"
-        >
-          APPLY NOW
-        </a>
-      </div>
-    </nav>
+
+      
+
+      {/* Navbar */}
+      <nav className=" bg-white text-greenTheme flex items-center justify-between px-6 py-4 shadow-md4">
+        {/* Logo */}
+        <div className="logo">
+          <img
+            src="https://www.niilmuniversity.ac.in/web/assets/img/logo.png"
+            alt="Medhavi Skills University"
+            className="h-12"
+          />
+        </div>
+
+        {/* Navigation Links */}
+        <ul className="flex space-x-6 items-center">
+          {menuItems.map((item, index) => (
+            <li key={index} className="relative group">
+              <a
+                href="#"
+                className="px-4 py-2 border border-greenTheme rounded hover:bg-greenTheme hover:text-white transition"
+              >
+                {item.label}
+              </a>
+              <div className="absolute hidden group-hover:block bg-white text-greenTheme shadow-lg rounded mt-2 py-2 w-64">
+                {item.links.map((link, linkIndex) => (
+                  <a
+                    key={linkIndex}
+                    href={link.href}
+                    className="block px-4 py-2 hover:bg-gray-100 text-sm"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </li>
+          ))}
+
+          {/* Apply Now Button */}
+          <li>
+            <a
+              href="#"
+              className="bg-greenTheme text-white px-4 py-2 rounded hover:bg-red-700"
+            >
+              APPLY NOW
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    
   );
 };
 
 export default Navbar;
+
+
+

@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Header = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    "https://msu-website-all-objects.s3.ap-south-1.amazonaws.com/website-images/home_banner_2.webp",
-    "https://msu-website-all-objects.s3.ap-south-1.amazonaws.com/website-images/home_banner_1.webp",
-    "https://msu-website-all-objects.s3.ap-south-1.amazonaws.com/website-images/home_banner_3.webp",
-    "https://msu-website-all-objects.s3.ap-south-1.amazonaws.com/website-images/home_banner_3.webp",
+    "https://www.niilmuniversity.ac.in/uploads/slider/WhatsApp_Image_2024_05_14_at_4.45.23_PM_1715685375.jpeg",
+    "https://www.niilmuniversity.ac.in/uploads/slider/WhatsApp_Image_2024_05_14_at_4.45.24_PM_1715685442.jpeg",
+    "https://www.niilmuniversity.ac.in/uploads/slider/WhatsApp_Image_2024_05_14_at_4.45.24_PM_(1)_1715685486.jpeg",
+    "https://www.niilmuniversity.ac.in/uploads/slider/WhatsApp_Image_2024_05_14_at_4.45.39_PM_1715685509.jpeg",
   ];
 
   const handleNext = () => {
@@ -22,10 +22,19 @@ const Header = () => {
     setCurrentSlide(index);
   };
 
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [currentSlide]); // Re-run if currentSlide changes
+
   return (
     <div id="default-carousel" className="relative w-full">
       {/* Carousel wrapper */}
-      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+      <div className="relative h-screen overflow-hidden rounded-lg">
         {slides.map((slide, index) => (
           <div
             key={index}
@@ -113,4 +122,5 @@ const Header = () => {
 };
 
 export default Header;
+
 

@@ -37,21 +37,21 @@ const Slider = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto move logic
+ 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
         prevIndex === slides.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Change slide every 3 seconds
+    }, 3000); 
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
+    return () => clearInterval(interval); 
   }, [slides.length]);
 
   return (
     <div className="w-full max-w-5xl mx-auto p-4">
       <div className="relative bg-gray-100 p-6 shadow-lg rounded-lg">
-        {/* Slides */}
+      
         <div
           className="flex transition-transform duration-500 ease-in-out space-x-4"
           style={{
@@ -62,7 +62,7 @@ const Slider = () => {
             <div
               key={slide.id}
               className="w-full flex-shrink-0 text-center"
-              style={{ height: "600px" }} // Adjusted container height
+              style={{ height: "600px" }} 
             >
               <img
                 src={slide.image}

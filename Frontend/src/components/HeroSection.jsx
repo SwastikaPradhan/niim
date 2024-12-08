@@ -1,7 +1,7 @@
 export default function HeroSection() {
   return (
     <div className="space-y-16 bg-gray-100 p-8">
-      {/* Section 1: Image Left, Content Right */}
+     
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="flex-1">
           <img
@@ -31,7 +31,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Section 2: Image Right, Content Left */}
+      
       <div className="flex flex-col md:flex-row-reverse items-center justify-between">
         <div className="flex-1">
           <img
