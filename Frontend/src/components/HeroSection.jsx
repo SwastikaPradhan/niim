@@ -42,12 +42,10 @@ export default function HeroSection() {
         </div>
         <div className="flex-1 space-y-4 md:mr-8">
           <h1 className="text-3xl md:text-5xl font-bold">
-            Empowering Skills for the Future!
+          A Multifaceted Learning Environment Beneath the Natural World!
           </h1>
           <p className="text-gray-600 text-lg leading-relaxed mt-4">
-            Our programs are designed to bridge the gap between academia and
-            industry. With hands-on learning, internships, and industry-aligned
-            curriculum, we prepare students to excel in their careers.
+          Our campus is a thriving community that embraces variety and cultivates a melting pot of students from all countries. It is more than simply a place to learn; it is a place where education meets the beauty of nature. At NIILM, we think it's important to create the perfect atmosphere for developing potential, particularly in the fields of art and culture. A doorway to a world of opportunities, NIILM School of Vocational Education is more than just an establishment. Come along with us on this educational, exploratory, and personal development trip on a campus that is as beautiful as it is intellectually stimulating. Welcome to a world where aspirations come true and brilliance meets education.
           </p>
           <button className="text-blue-500 underline">LEARN MORE →</button>
         </div>

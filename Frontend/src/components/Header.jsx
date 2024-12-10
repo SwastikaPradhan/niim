@@ -22,18 +22,17 @@ const Header = () => {
     setCurrentSlide(index);
   };
 
-  // Auto-slide functionality
+  
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 5000); // Change slide every 5 seconds
-
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, [currentSlide]); // Re-run if currentSlide changes
+    }, 5000); 
+    return () => clearInterval(interval); 
+  }, [currentSlide]); 
 
   return (
     <div id="default-carousel" className="relative w-full">
-      {/* Carousel wrapper */}
+     
       <div className="relative h-screen overflow-hidden rounded-lg">
         {slides.map((slide, index) => (
           <div
@@ -52,7 +51,7 @@ const Header = () => {
         ))}
       </div>
 
-      {/* Slider indicators */}
+     
       <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
         {slides.map((_, index) => (
           <button
@@ -68,7 +67,7 @@ const Header = () => {
         ))}
       </div>
 
-      {/* Slider controls */}
+      
       <button
         type="button"
         className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"

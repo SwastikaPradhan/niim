@@ -60,7 +60,7 @@ const Navbar = () => {
 
   return (
     <header>
-      {/* Announcement Bar */}
+     
       <div className="bg-redTheme text-center py-2 font-bold text-white overflow-hidden">
   <div className="whitespace-nowrap animate-move">
     Announcements: Admission 2025 Open for Queries or Telephonic Counseling call +91 5783921999
@@ -71,9 +71,9 @@ const Navbar = () => {
 
       
 
-      {/* Navbar */}
+     
       <nav className=" bg-white text-greenTheme flex items-center justify-between px-6 py-4 shadow-md4">
-        {/* Logo */}
+       
         <div className="logo">
           <img
             src="https://www.niilmuniversity.ac.in/web/assets/img/logo.png"
@@ -82,7 +82,7 @@ const Navbar = () => {
           />
         </div>
 
-        {/* Navigation Links */}
+       
         <ul className="flex space-x-6 items-center">
           {menuItems.map((item, index) => (
             <li key={index} className="relative group">
@@ -106,7 +106,7 @@ const Navbar = () => {
             </li>
           ))}
 
-          {/* Apply Now Button */}
+         
           <li>
             <a
               href="#"
